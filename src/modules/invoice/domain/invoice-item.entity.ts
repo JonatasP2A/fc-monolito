@@ -1,3 +1,4 @@
+import AggregateRoot from "../../@shared/domain/entity/aggregate-root.interface"
 import BaseEntity from "../../@shared/domain/entity/base.entity"
 import Id from "../../@shared/domain/value-object/id.value-object"
 
@@ -8,7 +9,7 @@ type InvoiceItemProps = {
   price: number
 }
 
-export default class InvoiceItem extends BaseEntity {
+export default class InvoiceItem extends BaseEntity implements AggregateRoot {
   private _invoice_id: string
   private _name: string
   private _price: number

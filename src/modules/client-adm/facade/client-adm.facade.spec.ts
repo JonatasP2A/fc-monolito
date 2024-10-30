@@ -4,6 +4,7 @@ import ClientRepository from "../repository/client.repository";
 import AddClientUseCase from "../usecase/add-client/add-client.usecase";
 import ClientAdmFacade from "./client-adm.facade";
 import ClientAdmFacadeFactory from "../factory/client-adm.facade.factory";
+import { AddClientFacadeInputDto } from "./client-adm.facade.interface";
 
 describe("Client Adm Facade test", () => {
   let sequelize: Sequelize;
@@ -32,11 +33,16 @@ describe("Client Adm Facade test", () => {
       findUsecase: undefined
     });
 
-    const input = {
+    const input: AddClientFacadeInputDto = {
       id: "1",
       name: "John Doe",
       email: "johndoe@gmail.com",
-      address: "123 Main St",
+      document: "123456789",
+      street: "Main St",
+      number: "123",
+      complement: "Apt 1",
+      city: "Springfield",
+      zipCode: "12345-678",
     }
 
     await facade.add(input);
@@ -46,17 +52,27 @@ describe("Client Adm Facade test", () => {
     expect(client).toBeDefined();
     expect(client?.name).toBe(input.name);
     expect(client?.email).toBe(input.email);
-    expect(client?.address).toBe(input.address);
+    expect(client?.document).toBe(input.document);
+    expect(client?.street).toBe(input.street);
+    expect(client?.number).toBe(input.number);
+    expect(client?.complement).toBe(input.complement);
+    expect(client?.city).toBe(input.city);
+    expect(client?.zipCode).toBe(input.zipCode);
   })
 
   it("should find a client", async () => {
     const facade = ClientAdmFacadeFactory.create();
 
-    const input = {
+    const input: AddClientFacadeInputDto = {
       id: "1",
       name: "John Doe",
       email: "johndoe@gmail.com",
-      address: "123 Main St",
+      document: "123456789",
+      street: "Main St",
+      number: "123",
+      complement: "Apt 1",
+      city: "Springfield",
+      zipCode: "12345-678",
     }
 
     await facade.add(input);
@@ -67,6 +83,11 @@ describe("Client Adm Facade test", () => {
     expect(client.id).toBe(input.id);
     expect(client.name).toBe(input.name);
     expect(client.email).toBe(input.email);
-    expect(client.address).toBe(input.address);
+    expect(client.document).toBe(input.document);
+    expect(client.street).toBe(input.street);
+    expect(client.number).toBe(input.number);
+    expect(client.complement).toBe(input.complement);
+    expect(client.city).toBe(input.city);
+    expect(client.zipCode).toBe(input.zipCode);
   })
 });

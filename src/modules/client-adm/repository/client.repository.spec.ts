@@ -28,7 +28,12 @@ describe("Client Repository test", () => {
       id: new Id("1"),
       name: "John Doe",
       email: "johndoe@gmail.com",
-      address: "123 Main St",
+      document: "123456789",
+      street: "Main St",
+      number: "123",
+      complement: "Apt 1",
+      city: "Springfield",
+      zipCode: "12345-678",
     })
 
     const repository = new ClientRepository();
@@ -39,7 +44,12 @@ describe("Client Repository test", () => {
     expect(clientDb.id).toBe(client.id.id);
     expect(clientDb.name).toBe(client.name);
     expect(clientDb.email).toBe(client.email);
-    expect(clientDb.address).toBe(client.address);
+    expect(clientDb.document).toBe(client.document);
+    expect(clientDb.street).toBe(client.street);
+    expect(clientDb.number).toBe(client.number);
+    expect(clientDb.complement).toBe(client.complement);
+    expect(clientDb.city).toBe(client.city);
+    expect(clientDb.zipCode).toBe(client.zipCode);
     expect(clientDb.createdAt).toStrictEqual(client.createdAt);
     expect(clientDb.updatedAt).toStrictEqual(client.updatedAt);
   })
@@ -49,7 +59,12 @@ describe("Client Repository test", () => {
       id: "1",
       name: "John Doe",
       email: "johndoe@gmail.com",
-      address: "123 Main St",
+      document: "123456789",
+      street: "Main St",
+      number: "123",
+      complement: "Apt 1",
+      city: "Springfield",
+      zipCode: "12345-678",
       createdAt: new Date(),
       updatedAt: new Date(),
     });
@@ -60,7 +75,12 @@ describe("Client Repository test", () => {
     expect(result.id.id).toBe(client.id);
     expect(result.name).toBe(client.name);
     expect(result.email).toBe(client.email);
-    expect(result.address).toBe(client.address);
+    expect(result.document).toBe(client.document);
+    expect(result.street).toBe(client.street);
+    expect(result.number).toBe(client.number);
+    expect(result.complement).toBe(client.complement);
+    expect(result.city).toBe(client.city);
+    expect(result.zipCode).toBe(client.zipCode);
     expect(result.createdAt).toStrictEqual(client.createdAt);
     expect(result.updatedAt).toStrictEqual(client.updatedAt);
   });    

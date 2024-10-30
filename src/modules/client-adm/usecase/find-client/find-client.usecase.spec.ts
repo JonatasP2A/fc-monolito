@@ -11,6 +11,7 @@ const client = new Client({
   number: "123",
   complement: "Apt 1",
   city: "Springfield",
+  state: "NY",
   zipCode: "12345-678",
 })
 
@@ -40,6 +41,7 @@ describe("FindClientUsecase unit test", () => {
     expect(result.number).toBe(client.number);
     expect(result.complement).toBe(client.complement);
     expect(result.city).toBe(client.city);
+    expect(result.state).toBe(client.state);
     expect(result.zipCode).toBe(client.zipCode);
   })
 })

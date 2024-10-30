@@ -7,6 +7,7 @@ export interface AddClientInputDto {
   number: string;
   complement: string;
   city: string;
+  state: string;
   zipCode: string;
 }
 
@@ -19,6 +20,7 @@ export interface AddClientOutputDto {
   number: string;
   complement: string;
   city: string;
+  state: string;
   zipCode: string;
   createdAt: Date;
   updatedAt: Date;

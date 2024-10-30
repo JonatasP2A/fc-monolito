@@ -16,6 +16,7 @@ export default class AddClientUseCase implements UseCaseInterface {
       number: input.number,
       complement: input.complement,
       city: input.city,
+      state: input.state,
       zipCode: input.zipCode,
     }
 
@@ -31,6 +32,7 @@ export default class AddClientUseCase implements UseCaseInterface {
       number: client.number,
       complement: client.complement,
       city: client.city,
+      state: client.state,
       zipCode: client.zipCode,
       createdAt: client.createdAt,
       updatedAt: client.updatedAt,

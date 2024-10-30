@@ -20,6 +20,7 @@ describe('AddClientUsecase unit test', () => {
       number: "123",
       complement: "Apt 1",
       city: "Springfield",
+      state: "NY",
       zipCode: "12345-678",
     }
 
@@ -34,6 +35,7 @@ describe('AddClientUsecase unit test', () => {
     expect(result.number).toBe(input.number);
     expect(result.complement).toBe(input.complement);
     expect(result.city).toBe(input.city);
+    expect(result.state).toBe(input.state);
     expect(result.zipCode).toBe(input.zipCode);
   })
 })

@@ -33,6 +33,7 @@ describe("Client Repository test", () => {
       number: "123",
       complement: "Apt 1",
       city: "Springfield",
+      state: "NY",
       zipCode: "12345-678",
     })
 
@@ -49,6 +50,7 @@ describe("Client Repository test", () => {
     expect(clientDb.number).toBe(client.number);
     expect(clientDb.complement).toBe(client.complement);
     expect(clientDb.city).toBe(client.city);
+    expect(clientDb.state).toBe(client.state);
     expect(clientDb.zipCode).toBe(client.zipCode);
     expect(clientDb.createdAt).toStrictEqual(client.createdAt);
     expect(clientDb.updatedAt).toStrictEqual(client.updatedAt);
@@ -64,6 +66,7 @@ describe("Client Repository test", () => {
       number: "123",
       complement: "Apt 1",
       city: "Springfield",
+      state: "NY",
       zipCode: "12345-678",
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -80,6 +83,7 @@ describe("Client Repository test", () => {
     expect(result.number).toBe(client.number);
     expect(result.complement).toBe(client.complement);
     expect(result.city).toBe(client.city);
+    expect(result.state).toBe(client.state);
     expect(result.zipCode).toBe(client.zipCode);
     expect(result.createdAt).toStrictEqual(client.createdAt);
     expect(result.updatedAt).toStrictEqual(client.updatedAt);

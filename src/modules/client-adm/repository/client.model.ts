@@ -29,6 +29,9 @@ export class ClientModel extends Model {
 
   @Column({ allowNull: false })
   city: string;
+  
+  @Column({ allowNull: false })
+  state: string;
 
   @Column({ allowNull: false })
   zipCode: string;

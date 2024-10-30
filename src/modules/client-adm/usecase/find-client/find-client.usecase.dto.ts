@@ -11,6 +11,7 @@ export interface FindClientOutputDto {
   number: string;
   complement: string;
   city: string;
+  state: string;
   zipCode: string;
   createdAt: Date;
   updatedAt: Date;

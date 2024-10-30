@@ -42,6 +42,7 @@ describe("Client Adm Facade test", () => {
       number: "123",
       complement: "Apt 1",
       city: "Springfield",
+      state: "NY",
       zipCode: "12345-678",
     }
 
@@ -57,6 +58,7 @@ describe("Client Adm Facade test", () => {
     expect(client?.number).toBe(input.number);
     expect(client?.complement).toBe(input.complement);
     expect(client?.city).toBe(input.city);
+    expect(client?.state).toBe(input.city);
     expect(client?.zipCode).toBe(input.zipCode);
   })
 
@@ -72,6 +74,7 @@ describe("Client Adm Facade test", () => {
       number: "123",
       complement: "Apt 1",
       city: "Springfield",
+      state: "NY",
       zipCode: "12345-678",
     }
 
@@ -88,6 +91,7 @@ describe("Client Adm Facade test", () => {
     expect(client.number).toBe(input.number);
     expect(client.complement).toBe(input.complement);
     expect(client.city).toBe(input.city);
+    expect(client.state).toBe(input.state);
     expect(client.zipCode).toBe(input.zipCode);
   })
 });

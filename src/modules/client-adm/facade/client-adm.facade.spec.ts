@@ -58,7 +58,7 @@ describe("Client Adm Facade test", () => {
     expect(client?.number).toBe(input.number);
     expect(client?.complement).toBe(input.complement);
     expect(client?.city).toBe(input.city);
-    expect(client?.state).toBe(input.city);
+    expect(client?.state).toBe(input.state);
     expect(client?.zipCode).toBe(input.zipCode);
   })
 
